@@ -249,12 +249,14 @@ export default function Home() {
               <div className="relative w-full max-w-md">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#c5a059] to-[#1c326e] rounded-xl blur-md opacity-30"></div>
                 <div className="relative bg-[#142452] border border-[#c5a059]/30 rounded-xl overflow-hidden shadow-2xl p-6 text-center">
-                  <div className="w-full h-80 sm:h-96 rounded-lg overflow-hidden relative shadow-inner mb-6 bg-[#0e1a3c] flex items-center justify-center border border-[#c5a059]/20">
-                    <img
-                      src="/manus-storage/file_00000000c214820e9f8b6699acefef3f.png"
-                      alt="William da Silva Lucas - Advogado responsável"
-                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
-                    />
+                  <div className="w-full h-80 sm:h-96 rounded-lg overflow-hidden relative shadow-inner mb-6 bg-[#0e1a3c] flex flex-col items-center justify-center border border-[#c5a059]/20 p-6 text-center">
+                    <div className="w-20 h-20 rounded-full bg-[#0a1128] text-[#c5a059] flex items-center justify-center mb-3 border border-[#c5a059]/40 shadow">
+                      <Users className="w-10 h-10" />
+                    </div>
+                    <p className="text-[#d4b572] font-heading font-semibold text-base mb-1">Espaço Preparado</p>
+                    <p className="text-gray-400 text-xs max-w-xs">
+                      Foto profissional do advogado William da Silva Lucas (espaço reservado para futura inserção).
+                    </p>
                   </div>
                   <h3 className="font-heading text-xl font-bold text-white mb-1">William da Silva Lucas</h3>
                   <p className="text-[#d4b572] text-sm font-medium mb-3">Advogado Responsável • OAB-SP nº 377.544</p>
