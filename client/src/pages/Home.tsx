@@ -27,7 +27,9 @@ import {
   X,
   ExternalLink,
   HelpCircle,
-  Award
+  Award,
+  Sparkles,
+  Shield
 } from "lucide-react";
 
 export default function Home() {
@@ -474,6 +476,101 @@ export default function Home() {
               >
                 <span>Tenho uma questão jurídica</span>
                 <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEÇÃO IDENTIDADE VISUAL & BRAND KIT */}
+      <section id="identidade-visual" className="py-24 bg-[#080e22] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(197,160,89,0.08),transparent_50%)]"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="text-[#c5a059] font-heading text-sm font-bold tracking-widest uppercase px-3 py-1 bg-[#c5a059]/10 rounded-full border border-[#c5a059]/35">
+              Branding & Identidade Institucional
+            </span>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white">
+              Identidade Visual Sofisticada e Consistente
+            </h2>
+            <div className="w-20 h-1 bg-[#c5a059] mx-auto rounded-full" />
+            <p className="text-gray-300 text-base sm:text-lg font-light leading-relaxed pt-2">
+              A identidade visual da WSL Advocacia e Gestão foi concebida para refletir solidez, prestígio e rigor técnico. Cada elemento gráfico traduz o padrão de excelência do escritório.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {/* Paleta de Cores */}
+            <div className="bg-[#0f1b3d] border border-[#c5a059]/30 rounded-xl p-8 shadow-xl flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 rounded-lg bg-[#c5a059]/20 text-[#c5a059] flex items-center justify-center mb-6 border border-[#c5a059]/40">
+                  <Sparkles className="w-7 h-7" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-white mb-3">Paleta de Cores Nobre</h3>
+                <p className="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                  Composta por azul-marinho profundo (#0a1128), transmitindo autoridade e solidez, e dourado sofisticado (#c5a059), que simboliza prestígio e distinção.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 bg-[#0a1128] p-3 rounded-lg border border-white/10">
+                    <div className="w-8 h-8 rounded bg-[#0a1128] border border-white/20 shadow-inner"></div>
+                    <div className="text-xs">
+                      <p className="text-white font-semibold">Azul Marinho Profundo</p>
+                      <p className="text-gray-400 font-mono">#0a1128</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 bg-[#0a1128] p-3 rounded-lg border border-white/10">
+                    <div className="w-8 h-8 rounded bg-[#c5a059] shadow-inner"></div>
+                    <div className="text-xs">
+                      <p className="text-white font-semibold">Dourado Institucional</p>
+                      <p className="text-gray-400 font-mono">#c5a059</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Tipografia */}
+            <div className="bg-[#0f1b3d] border border-[#c5a059]/30 rounded-xl p-8 shadow-xl flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 rounded-lg bg-[#c5a059]/20 text-[#c5a059] flex items-center justify-center mb-6 border border-[#c5a059]/40">
+                  <FileText className="w-7 h-7" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-white mb-3">Tipografia Refinada</h3>
+                <p className="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                  Associação entre fontes com serifas clássicas (Cinzel / Playfair) para títulos institucionais e fontes limpas (Plus Jakarta Sans) para leitura fluida.
+                </p>
+                <div className="space-y-3 bg-[#0a1128] p-4 rounded-lg border border-white/10 text-xs">
+                  <div>
+                    <span className="text-[#c5a059] font-semibold">Títulos: </span>
+                    <span className="font-heading text-[#d4b572] text-sm font-bold">Cinzel & Playfair Display</span>
+                  </div>
+                  <div className="pt-2 border-t border-white/10">
+                    <span className="text-[#c5a059] font-semibold">Interface: </span>
+                    <span className="font-sans text-gray-300">Plus Jakarta Sans / Inter</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Manual de Marca */}
+            <div className="bg-[#0f1b3d] border border-[#c5a059]/30 rounded-xl p-8 shadow-xl flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 rounded-lg bg-[#c5a059]/20 text-[#c5a059] flex items-center justify-center mb-6 border border-[#c5a059]/40">
+                  <Shield className="w-7 h-7" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-white mb-3">Manual de Marca & Kit</h3>
+                <p className="text-gray-300 text-sm font-light leading-relaxed mb-6">
+                  Diretrizes completas para aplicação da marca em petições, papéis timbrados, cartões de visita físicos e peças digitais em conformidade com as normas da OAB.
+                </p>
+              </div>
+              <a
+                href="/brand-guidelines.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-[#c5a059] text-[#0a1128] font-semibold text-sm py-3 px-5 rounded-lg hover:bg-[#d4b572] transition-colors shadow-lg"
+              >
+                <span>Acessar Manual de Marca</span>
+                <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
