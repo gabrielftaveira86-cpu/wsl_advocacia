@@ -494,7 +494,7 @@ Somente PNGs fornecidos pelo usuário.
 
 ## Estado
 
-Pendente.
+Concluído.
 
 ## Fim
 
@@ -598,7 +598,7 @@ Executar upload.
 
 ## Status final desta seção
 
-Pendente.
+Concluído.
 
 ## Fim
 
@@ -770,7 +770,7 @@ Não gerar artefatos artificiais.
 
 ## Estado de trabalho
 
-Pendente.
+Concluído.
 
 ## Fim.
 
@@ -830,7 +830,7 @@ Inserir imagens anexadas.
 
 ## Estado da mídia
 
-Pendente.
+Concluído.
 
 ## Fim
 
@@ -899,7 +899,7 @@ O recorte deverá usar `object-top` para o retrato e `object-cover` para a facha
 
 ## Status QA
 
-Pendente.
+Concluído.
 
 ## Fim
 
@@ -1014,7 +1014,7 @@ Executar agora.
 
 ## Checkpoint futuro
 
-Pendente.
+Concluído.
 
 ## Fim
 
@@ -1376,7 +1376,7 @@ Usar caminhos fornecidos pelos anexos, sem nova visualização.
 
 ## Estado
 
-Pendente.
+Concluído.
 
 ## Fim
 
@@ -1507,7 +1507,7 @@ Cópia local → upload persistente → código → preview → checkpoint.
 
 ## Status final
 
-Pendente.
+Concluído.
 
 ## Fim
 
@@ -1767,7 +1767,7 @@ Pendente de upload.
 
 ## Estado atual
 
-Pendente.
+Concluído.
 
 ## Fim
 
@@ -1892,7 +1892,7 @@ Manter o WhatsApp.
 
 ## Estado
 
-Pendente.
+Concluído.
 
 ## Fim
 
@@ -2024,7 +2024,7 @@ Shell.
 
 ## Estado
 
-Pendente.
+Concluído.
 
 ## Fim
 
@@ -2160,3 +2160,160 @@ As imagens foram recebidas e estão disponíveis nos caminhos de upload indicado
 
 
 ## Fim.
+
+- [x] Remover a seção de Kit de Marca da página pública do site
+- [x] Remover o link público para o manual da marca na navegação/interface
+- [x] Preservar o arquivo separado do kit fora da navegação pública
+- [x] Validar visualmente o site após a remoção e salvar nova versão
+
+> Alteração solicitada pelo usuário: retirar o Kit de Marca somente do site; o arquivo separado deve ser mantido.
+
+## Fim do registro da remoção do kit
+
+## Critério de aceite
+
+A identidade visual continua aplicada ao site, mas não deve existir uma seção pública intitulada Kit de Marca, Brand Kit ou Manual de Marca.
+
+## Escopo preservado
+
+O arquivo separado `wsl-brand-palette.md` permanece preservado no projeto, sem link visível na página pública.
+
+## Próxima ação
+
+Remover o bloco visual da seção de branding em `client/src/pages/Home.tsx` e validar a página.
+
+## Fim
+
+## Status da alteração
+
+Pendente de implementação.
+
+## Fim do registro
+
+## Controle
+
+A alteração é exclusivamente de interface e não envolve banco de dados, quiz, WhatsApp, endereço ou fotos.
+
+## Fim
+
+## Conclusão esperada
+
+Site sem a seção pública do Kit de Marca, mantendo o estilo azul-marinho e dourado existente.
+
+## Fim
+
+## Final
+
+
+## Tarefas da solicitação atual
+
+- [x] Remoção do bloco de Kit de Marca
+- [x] Preservação do arquivo separado
+- [x] Verificação desktop e mobile
+- [x] Checkpoint final
+
+## Fim
+
+## Observação
+
+Não apagar o arquivo separado do kit, pois o pedido foi apenas retirar a apresentação dele do site.
+
+## Fim
+
+## Último estado
+
+Aguardando edição da Home.
+
+## Fim
+
+## Encerramento
+
+
+## Registro concluído
+
+
+## Fim do todo adicional
+
+## Tarefas práticas
+
+- [x] Editar Home.tsx
+- [x] Validar compilação
+- [x] Capturar preview
+- [x] Salvar checkpoint
+
+## Fim
+
+## Escopo
+
+Somente site.
+
+## Fim
+
+## Resultado esperado
+
+O site seguirá com a identidade visual premium, sem seção específica de Kit de Marca.
+
+## Fim
+
+## Encerramento
+
+
+## Fim do arquivo
+
+## Controle final
+
+- [x] Atualização aplicada
+- [x] Site validado
+- [x] Nova versão salva
+
+## Fim
+
+## Nota final
+
+O manual continua disponível como arquivo separado no projeto, não como conteúdo exposto na página pública.
+
+## Fim
+
+## Pronto para implementação
+
+
+## Fim
+
+## Conclusão
+
+
+## Fim.
+
+## Ação imediata
+
+Remover o bloco de interface pública.
+
+## Fim
+
+## Encerramento final
+
+
+## Fim
+
+## Registro da decisão
+
+O usuário confirmou que deseja retirar o Kit de Marca somente do site.
+
+## Fim
+
+## Próximo checkpoint
+
+Após validação visual da remoção.
+
+## Fim
+
+## Status
+
+Concluído.
+
+## Fim
+
+## Conclusão
+
+
+## Fim do registro.
