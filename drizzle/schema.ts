@@ -26,3 +26,17 @@ export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
 // TODO: Add your tables here
+
+export const quizLeads = mysqlTable("quiz_leads", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 255 }).notNull(),
+  whatsapp: varchar("whatsapp", { length: 50 }).notNull(),
+  city: varchar("city", { length: 255 }).notNull(),
+  legalArea: varchar("legalArea", { length: 100 }).notNull(),
+  description: text("description"),
+  hasProcess: varchar("hasProcess", { length: 50 }),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type QuizLead = typeof quizLeads.$inferSelect;
+export type InsertQuizLead = typeof quizLeads.$inferInsert;

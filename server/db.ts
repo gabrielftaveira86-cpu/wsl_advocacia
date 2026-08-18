@@ -90,3 +90,20 @@ export async function getUserByOpenId(openId: string) {
 }
 
 // TODO: add feature queries here as your schema grows.
+
+import { quizLeads, InsertQuizLead, QuizLead } from "../drizzle/schema";
+
+export async function createQuizLead(lead: InsertQuizLead): Promise<number> {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("[Database] Database not available");
+  }
+  const result = await db.insert(quizLeads).values(lead);
+  return Number(result[0].insertId);
+}
+
+export async function getQuizLeads(): Promise<QuizLead[]> {
+  const db = await getDb();
+  if (!db) return [];
+  return await db.select().from(quizLeads).orderBy(quizLeads.createdAt);
+}
