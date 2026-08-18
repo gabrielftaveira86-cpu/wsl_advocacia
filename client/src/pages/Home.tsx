@@ -249,14 +249,12 @@ export default function Home() {
               <div className="relative w-full max-w-md">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#c5a059] to-[#1c326e] rounded-xl blur-md opacity-30"></div>
                 <div className="relative bg-[#142452] border border-[#c5a059]/30 rounded-xl overflow-hidden shadow-2xl p-6 text-center">
-                  <div className="w-full h-80 sm:h-96 rounded-lg overflow-hidden relative shadow-inner mb-6 bg-[#0e1a3c] flex flex-col items-center justify-center border border-[#c5a059]/20 p-6 text-center">
-                    <div className="w-20 h-20 rounded-full bg-[#0a1128] text-[#c5a059] flex items-center justify-center mb-3 border border-[#c5a059]/40 shadow">
-                      <Users className="w-10 h-10" />
-                    </div>
-                    <p className="text-[#d4b572] font-heading font-semibold text-base mb-1">Espaço Preparado</p>
-                    <p className="text-gray-400 text-xs max-w-xs">
-                      Foto profissional do advogado William da Silva Lucas (espaço reservado para futura inserção).
-                    </p>
+                  <div className="w-full h-80 sm:h-96 rounded-lg overflow-hidden relative shadow-inner mb-6 bg-[#0e1a3c] border border-[#c5a059]/20">
+                    <img
+                      src="/manus-storage/william-da-silva-lucas_c603274d.png"
+                      alt="William da Silva Lucas, advogado responsável pela WSL Advocacia e Gestão"
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                    />
                   </div>
                   <h3 className="font-heading text-xl font-bold text-white mb-1">William da Silva Lucas</h3>
                   <p className="text-[#d4b572] text-sm font-medium mb-3">Advogado Responsável • OAB-SP nº 377.544</p>
@@ -820,18 +818,16 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-7">
-              <div className="w-full h-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-200 relative bg-gray-100 flex items-center justify-center">
-                {/* Embed Google Map for Rua José Versolato, 111, São Bernardo do Campo */}
-                <iframe
-                  title="Mapa de Localização - Rua José Versolato, 111, São Bernardo do Campo"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.542475654005!2d-46.53582492375537!3d-23.693245578732815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4223f6e8c71b%3A0xb6974249a5b3a628!2sR.%20Jos%C3%addComponent+Versolato%2C+111+-+Centro%2C+S%C3%A3o+Bernardo+do+Campo+-+SP%2C+09750-730!5e0!3m2!1spt-BR!2sbr!4v1708300000000!5m2!1spt-BR!2sbr"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={false}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+              <div className="w-full h-[450px] rounded-xl overflow-hidden shadow-2xl border border-gray-200 relative bg-gray-100">
+                <img
+                  src="/manus-storage/edificio-domo-111_d9e5aa50.png"
+                  alt="Fachada do edifício Domo, na Rua José Versolato, 111, em São Bernardo do Campo"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0a1128]/90 via-[#0a1128]/45 to-transparent p-6 pt-16">
+                  <p className="text-white font-heading text-lg font-semibold">Domo Business • Rua José Versolato, 111</p>
+                  <p className="text-gray-200 text-sm mt-1">Centro, São Bernardo do Campo – SP</p>
+                </div>
               </div>
             </div>
           </div>
