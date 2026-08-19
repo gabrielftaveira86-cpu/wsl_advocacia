@@ -1,7 +1,7 @@
 # Manual de Identidade Visual — WSL Advocacia e Gestão
 
 ## 1. Visão Geral da Marca
-A **WSL Advocacia e Gestão** é um escritório de advocacia moderna e sofisticada, liderado pelo advogado **William da Silva Lucas** (**OAB-SP nº 377.544**). O escritório destaca-se pela excelência técnica, rigor metodológico, atendimento humanizado e clareza estratégica, oferecendo assessoria jurídica presencial em São Bernardo do Campo – SP e atendimento digital seguro para clientes de diversas localidades.
+A **WSL Advocacia e Gestão** é um escritório de advocacia moderna e sofisticada, liderado pelo advogado **Wiliam da Silva Lucas** (**OAB-SP nº 377.544**). O escritório destaca-se pela excelência técnica, rigor metodológico, atendimento humanizado e clareza estratégica, oferecendo assessoria jurídica presencial em São Bernardo do Campo – SP e atendimento digital seguro para clientes de diversas localidades.
 
 ---
 

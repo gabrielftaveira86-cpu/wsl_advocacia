@@ -2317,3 +2317,8 @@ Concluído.
 
 
 ## Fim do registro.
+
+- [x] Corrigir todas as ocorrências públicas de “William da Silva Lucas” para “Wiliam da Silva Lucas”, com apenas um “l”
+- [x] Validar o nome corrigido no site e salvar nova versão
+
+> Alteração solicitada pelo usuário: o nome correto é Wiliam da Silva Lucas.

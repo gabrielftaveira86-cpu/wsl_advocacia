@@ -222,7 +222,7 @@ export default function Home() {
               </p>
 
               <div className="pt-2 pb-2 border-l-2 border-[#c5a059] pl-4 text-left mx-auto lg:mx-0 max-w-md bg-[#142452]/40 p-3 rounded-r-lg">
-                <p className="text-white font-semibold font-heading text-lg">William da Silva Lucas</p>
+                <p className="text-white font-semibold font-heading text-lg">Wiliam da Silva Lucas</p>
                 <p className="text-[#d4b572] text-sm font-medium tracking-wide">OAB-SP nº 377.544</p>
               </div>
 
@@ -254,11 +254,11 @@ export default function Home() {
                   <div className="w-full h-80 sm:h-96 rounded-lg overflow-hidden relative shadow-inner mb-6 bg-[#0e1a3c] border border-[#c5a059]/20">
                     <img
                       src="/manus-storage/william-da-silva-lucas_c603274d.png"
-                      alt="William da Silva Lucas, advogado responsável pela WSL Advocacia e Gestão"
+                      alt="Wiliam da Silva Lucas, advogado responsável pela WSL Advocacia e Gestão"
                       className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-bold text-white mb-1">William da Silva Lucas</h3>
+                  <h3 className="font-heading text-xl font-bold text-white mb-1">Wiliam da Silva Lucas</h3>
                   <p className="text-[#d4b572] text-sm font-medium mb-3">Advogado Responsável • OAB-SP nº 377.544</p>
                   <div className="flex items-center justify-center gap-2 text-xs text-gray-300">
                     <MapPin className="w-3.5 h-3.5 text-[#c5a059]" />
@@ -293,7 +293,7 @@ export default function Home() {
                 Atendimento humanizado, rigor técnico e estratégia personalizada
               </h3>
               <p className="text-gray-700 leading-relaxed font-light">
-                Sob a liderança do advogado <strong className="font-medium text-[#0a1128]">William da Silva Lucas</strong> (OAB-SP nº 377.544), a <strong className="font-medium text-[#0a1128]">WSL Advocacia e Gestão</strong> atua com foco na resolução de conflitos e na proteção dos direitos de seus clientes com total discrição e rigor metodológico.
+                Sob a liderança do advogado <strong className="font-medium text-[#0a1128]">Wiliam da Silva Lucas</strong> (OAB-SP nº 377.544), a <strong className="font-medium text-[#0a1128]">WSL Advocacia e Gestão</strong> atua com foco na resolução de conflitos e na proteção dos direitos de seus clientes com total discrição e rigor metodológico.
               </p>
               <p className="text-gray-700 leading-relaxed font-light">
                 Entendemos que cada situação jurídica possui particularidades únicas. Por isso, oferecemos análises individuais e detalhadas, buscando sempre o melhor direcionamento para cada cliente, seja de forma consultiva ou contenciosa.
@@ -515,7 +515,7 @@ export default function Home() {
               </div>
               <h3 className="font-heading text-xl font-bold text-[#0a1128] mb-3">O caso é analisado individualmente</h3>
               <p className="text-gray-600 text-sm font-light leading-relaxed">
-                O advogado William da Silva Lucas analisa cuidadosamente as informações fornecidas para compreender a viabilidade e os direitos envolvidos.
+                O advogado Wiliam da Silva Lucas analisa cuidadosamente as informações fornecidas para compreender a viabilidade e os direitos envolvidos.
               </p>
             </div>
 
@@ -795,7 +795,7 @@ export default function Home() {
                     <Award className="w-5 h-5 text-[#c5a059] shrink-0 mt-0.5" />
                     <div>
                       <strong className="block text-white font-medium">Responsável:</strong>
-                      <p className="text-gray-300">William da Silva Lucas</p>
+                      <p className="text-gray-300">Wiliam da Silva Lucas</p>
                       <p className="text-[#d4b572] text-xs font-semibold">OAB-SP nº 377.544</p>
                     </div>
                   </div>
@@ -875,7 +875,7 @@ export default function Home() {
                 <span className="font-heading text-lg font-bold">WSL Advocacia</span>
               </div>
               <p className="text-gray-400 text-sm font-light">
-                William da Silva Lucas<br />
+                Wiliam da Silva Lucas<br />
                 <span className="text-[#d4b572] font-medium">OAB-SP nº 377.544</span>
               </p>
               <p className="text-gray-400 text-xs font-light">
@@ -923,7 +923,7 @@ export default function Home() {
               "As informações apresentadas neste site possuem caráter institucional e informativo e não substituem orientação jurídica individualizada."
             </p>
             <p className="text-xs text-gray-500 font-light">
-              © {new Date().getFullYear()} WSL Advocacia e Gestão • William da Silva Lucas (OAB-SP nº 377.544). Todos os direitos reservados.
+              © {new Date().getFullYear()} WSL Advocacia e Gestão • Wiliam da Silva Lucas (OAB-SP nº 377.544). Todos os direitos reservados.
             </p>
           </div>
         </div>

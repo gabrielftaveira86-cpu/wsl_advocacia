@@ -1,5 +1,5 @@
 # Kit de Marca Institucional — WSL Advocacia e Gestão
-**Advogado Responsável:** William da Silva Lucas | **OAB-SP nº 377.544**
+**Advogado Responsável:** Wiliam da Silva Lucas | **OAB-SP nº 377.544**
 
 Este documento apresenta a paleta de cores oficial e o sistema cromático exclusivo da **WSL Advocacia e Gestão**, desenvolvidos para assegurar consistência visual em petições, papéis timbrados, cartões de visita, apresentações corporativas e materiais de comunicação.
 
