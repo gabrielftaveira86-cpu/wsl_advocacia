@@ -2322,3 +2322,16 @@ Concluído.
 - [x] Validar o nome corrigido no site e salvar nova versão
 
 > Alteração solicitada pelo usuário: o nome correto é Wiliam da Silva Lucas.
+
+- [ ] Testar o fluxo do quiz até o WhatsApp com dados fictícios
+- [ ] Confirmar se a mensagem personalizada abre para o número correto sem enviar mensagem real
+
+- [ ] Vincular o domínio WILIAMLUCAS.ADV.BR ao site no painel de domínios
+- [ ] Configurar os registros DNS indicados pelo painel do site
+- [ ] Verificar a propagação e confirmar o domínio personalizado
+
+- [ ] Vincular somente o domínio wiliamlucas.adv.br ao site, sem alterar outras funcionalidades
+- [ ] Confirmar a configuração mínima necessária para o domínio funcionar
+
+- [x] Adicionar no rodapé o crédito “Site desenvolvido por Alfa Flow” com link para https://alfaflow-ai-growth.lovable.app
+- [x] Validar o link externo e salvar a nova versão do site

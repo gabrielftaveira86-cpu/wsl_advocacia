@@ -925,6 +925,14 @@ export default function Home() {
             <p className="text-xs text-gray-500 font-light">
               © {new Date().getFullYear()} WSL Advocacia e Gestão • Wiliam da Silva Lucas (OAB-SP nº 377.544). Todos os direitos reservados.
             </p>
+            <a
+              href="https://alfaflow-ai-growth.lovable.app"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-1 text-xs text-[#d4b572]/80 hover:text-[#d4b572] transition-colors"
+            >
+              Site desenvolvido por Alfa Flow <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
         </div>
       </footer>
