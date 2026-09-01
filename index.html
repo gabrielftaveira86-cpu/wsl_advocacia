@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WSL Advocacia e Gestão | Wiliam da Silva Lucas | São Bernardo do Campo</title>
+  <meta name="description" content="Advocacia especializada em Direito Cível, Previdenciário, Trabalhista, Consumidor e Criminal. Atendimento presencial em São Bernardo do Campo e on-line. OAB-SP nº 377.544." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0a1128;
+      --navy-mid: #142452;
+      --gold: #c5a059;
+      --gold-light: #d4b572;
+      --gold-pale: #e2c98d;
+      --ice: #f8f9fc;
+      --text: #0e1a3c;
+      --gray: #6b7280;
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text);
+      background: #fff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Cinzel', serif;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--navy);
+      border-bottom: 1px solid rgba(197,160,89,.2);
+      box-shadow: 0 2px 20px rgba(0,0,0,.3);
+    }
+
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-icon {
+      width: 40px; height: 40px; border-radius: 6px;
+      background: linear-gradient(135deg, var(--gold), #9e7a32);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-icon svg { width: 20px; height: 20px; color: var(--navy); }
+    .logo-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: #fff; letter-spacing: .06em;
+      line-height: 1.1;
+    }
+    .logo-sub {
+      font-size: .6rem; letter-spacing: .2em;
+      color: var(--gold-light); text-transform: uppercase;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: block; margin-top: 2px;
+    }
+
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a {
+      color: rgba(255,255,255,.85); font-size: .85rem;
+      font-weight: 500; transition: color .2s;
+    }
+    nav a:hover { color: var(--gold-light); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 22px; border-radius: 6px;
+      font-weight: 600; font-size: .875rem;
+      cursor: pointer; border: none; transition: all .2s;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .btn-gold {
+      background: var(--gold); color: var(--navy);
+    }
+    .btn-gold:hover { background: #b08d46; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(197,160,89,.35); }
+    .btn-outline {
+      background: transparent; color: #fff;
+      border: 1px solid rgba(197,160,89,.4);
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+    .btn-lg { padding: 14px 32px; font-size: 1rem; }
+    .btn-whatsapp { background: #25D366; color: #fff; }
+    .btn-whatsapp:hover { background: #20ba5a; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; background: none; border: none;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: #fff; border-radius: 2px; transition: all .3s;
+    }
+
+    .mobile-nav {
+      display: none; flex-direction: column; gap: 0;
+      background: var(--navy);
+      border-top: 1px solid rgba(197,160,89,.15);
+    }
+    .mobile-nav a {
+      display: block; padding: 14px 24px;
+      color: rgba(255,255,255,.85); font-size: .95rem; font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .mobile-nav a:hover { color: var(--gold-light); }
+    .mobile-nav .btn { margin: 16px 24px 20px; }
+    .mobile-nav.open { display: flex; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 80px 0 100px;
+      position: relative; overflow: hidden;
+    }
+    .hero-dots {
+      position: absolute; inset: 0; pointer-events: none; opacity: .08;
+      background-image: radial-gradient(var(--gold) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .hero-glow {
+      position: absolute; top: -120px; right: -120px;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle, rgba(197,160,89,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+      position: relative; z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 999px;
+      background: rgba(197,160,89,.1); border: 1px solid rgba(197,160,89,.3);
+      color: var(--gold-light); font-size: .75rem; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero-badge svg { width: 14px; height: 14px; }
+
+    .hero h1 {
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      font-weight: 700; line-height: 1.2;
+      letter-spacing: -.01em; margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.05rem; font-weight: 300;
+      color: rgba(255,255,255,.75); line-height: 1.7;
+      max-width: 520px; margin-bottom: 28px;
+    }
+
+    .hero-oab {
+      border-left: 2px solid var(--gold);
+      padding: 12px 16px;
+      background: rgba(20,36,82,.5);
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 32px; display: inline-block;
+    }
+    .hero-oab strong { display: block; font-family: 'Cinzel', serif; font-size: 1rem; }
+    .hero-oab span { font-size: .8rem; color: var(--gold-light); font-weight: 500; }
+
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Photo card */
+    .photo-card {
+      position: relative;
+    }
+    .photo-card::before {
+      content: ''; position: absolute; inset: -4px;
+      background: linear-gradient(135deg, var(--gold), var(--navy-mid));
+      border-radius: 16px; opacity: .35; blur: 8px;
+      filter: blur(8px);
+    }
+    .photo-card-inner {
+      position: relative;
+      background: var(--navy-mid);
+      border: 1px solid rgba(197,160,89,.25);
+      border-radius: 16px; overflow: hidden;
+      padding: 24px; text-align: center;
+      box-shadow: 0 24px 60px rgba(0,0,0,.4);
+    }
+    .photo-placeholder {
+      width: 100%; height: 340px; border-radius: 10px;
+      background: linear-gradient(160deg, var(--navy) 0%, #1c326e 100%);
+      border: 1px solid rgba(197,160,89,.2);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 12px;
+      margin-bottom: 20px; overflow: hidden;
+    }
+    .photo-placeholder svg { width: 64px; height: 64px; color: rgba(197,160,89,.3); }
+    .photo-placeholder span { color: rgba(255,255,255,.3); font-size: .8rem; }
+    .photo-name { font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.05rem; color: #fff; }
+    .photo-role { font-size: .8rem; color: var(--gold-light); margin: 4px 0 10px; font-weight: 500; }
+    .photo-loc { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: .75rem; color: rgba(255,255,255,.5); }
+    .photo-loc svg { width: 14px; height: 14px; color: var(--gold); }
+
+    /* ── SOBRE ── */
+    .section { padding: 88px 0; }
+    .section-label {
+      font-size: .72rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gold);
+      font-family: 'Cinzel', serif; margin-bottom: 12px; display: block;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 700; color: var(--navy); margin-bottom: 16px;
+    }
+    .section-rule {
+      width: 64px; height: 3px; background: var(--gold);
+      border-radius: 2px; margin-bottom: 20px;
+    }
+    .section-lead {
+      font-size: 1.05rem; font-weight: 300; color: var(--gray);
+      line-height: 1.7; max-width: 600px;
+    }
+    .section-header { margin-bottom: 56px; }
+
+    .bg-ice { background: var(--ice); }
+    .bg-navy { background: var(--navy); color: #fff; }
+
+    /* Sobre grid */
+    .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .sobre-text p { color: #374151; line-height: 1.75; font-weight: 300; margin-bottom: 16px; }
+    .sobre-text p strong { color: var(--navy); font-weight: 600; }
+
+    .sobre-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
+    .sobre-card {
+      padding: 16px; border-radius: 10px;
+      background: rgba(10,17,40,.04); border: 1px solid rgba(10,17,40,.08);
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .sobre-card-icon {
+      width: 38px; height: 38px; border-radius: 6px;
+      background: var(--navy); color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .sobre-card-icon svg { width: 18px; height: 18px; }
+    .sobre-card h4 { font-family: 'Cinzel', serif; font-size: .8rem; color: var(--navy); margin-bottom: 4px; }
+    .sobre-card p { font-size: .75rem; color: var(--gray); margin: 0; line-height: 1.5; }
+
+    .diferenciais-box {
+      background: var(--navy); border: 1px solid rgba(197,160,89,.3);
+      border-radius: 16px; padding: 36px; color: #fff;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    .diferenciais-box h4 {
+      font-family: 'Cinzel', serif; font-size: 1rem;
+      color: var(--gold-light);
+      padding-bottom: 20px; border-bottom: 1px solid rgba(197,160,89,.2);
+      margin-bottom: 24px;
+    }
+    .dif-item { display: flex; gap: 12px; margin-bottom: 18px; align-items: flex-start; }
+    .dif-item:last-child { margin-bottom: 28px; }
+    .dif-item svg { width: 20px; height: 20px; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+    .dif-item p { font-size: .9rem; line-height: 1.6; font-weight: 300; }
+    .dif-item p strong { color: #fff; font-weight: 600; }
+
+    /* ── ÁREAS ── */
+    .areas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .area-card {
+      background: #fff; border: 1px solid #e5e7eb;
+      border-radius: var(--radius); padding: 32px 28px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      transition: all .25s; box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    }
+    .area-card:hover {
+      box-shadow: 0 12px 32px rgba(0,0,0,.1);
+      transform: translateY(-4px); border-color: rgba(197,160,89,.3);
+    }
+    .area-icon {
+      width: 52px; height: 52px; border-radius: 10px;
+      background: var(--navy); color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px; transition: all .25s;
+    }
+    .area-card:hover .area-icon { background: var(--gold); color: var(--navy); }
+    .area-icon svg { width: 26px; height: 26px; }
+    .area-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .area-card p { font-size: .875rem; color: var(--gray); line-height: 1.65; font-weight: 300; flex: 1; margin-bottom: 20px; }
+    .area-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .8rem; font-weight: 600; color: var(--navy);
+      transition: color .2s;
+    }
+    .area-link:hover { color: var(--gold); }
+    .area-link svg { width: 14px; height: 14px; }
+
+    /* ── COMO FUNCIONA ── */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .step {
+      background: rgba(10,17,40,.04); border: 1px solid rgba(10,17,40,.08);
+      border-radius: var(--radius); padding: 36px 28px; text-align: center;
+    }
+    .step-num {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--navy); color: var(--gold);
+      font-family: 'Cinzel', serif; font-weight: 700; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; box-shadow: 0 4px 16px rgba(10,17,40,.2);
+    }
+    .step h3 { font-size: 1rem; color: var(--navy); margin-bottom: 12px; }
+    .step p { font-size: .875rem; color: var(--gray); line-height: 1.65; font-weight: 300; }
+
+    /* ── QUIZ ── */
+    .quiz-section {
+      background: var(--navy); padding: 88px 0;
+      position: relative; overflow: hidden;
+    }
+    .quiz-section .hero-dots { opacity: .07; }
+
+    .quiz-header { text-align: center; margin-bottom: 48px; }
+    .quiz-header .section-label { color: var(--gold-light); }
+    .quiz-header .section-title { color: #fff; }
+    .quiz-header .section-rule { margin: 0 auto 20px; }
+    .quiz-header .section-lead { color: rgba(255,255,255,.6); margin: 0 auto; }
+
+    .quiz-box {
+      max-width: 680px; margin: 0 auto;
+      background: var(--navy-mid); border: 1px solid rgba(197,160,89,.25);
+      border-radius: 20px; padding: 40px 44px;
+      box-shadow: 0 32px 80px rgba(0,0,0,.4);
+    }
+
+    .quiz-progress-label {
+      display: flex; justify-content: space-between;
+      font-size: .72rem; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--gold-light); margin-bottom: 8px;
+    }
+    .quiz-bar {
+      height: 4px; background: rgba(255,255,255,.08);
+      border-radius: 2px; margin-bottom: 36px; overflow: hidden;
+    }
+    .quiz-bar-fill {
+      height: 100%; background: var(--gold);
+      border-radius: 2px; transition: width .4s ease;
+    }
+
+    .quiz-step { display: none; }
+    .quiz-step.active { display: block; }
+
+    .quiz-step h3 {
+      font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 24px;
+      line-height: 1.4;
+    }
+
+    .radio-options { display: flex; flex-direction: column; gap: 10px; }
+    .radio-opt {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 18px; border-radius: 10px;
+      background: var(--navy); border: 1px solid rgba(197,160,89,.15);
+      cursor: pointer; transition: border-color .2s;
+    }
+    .radio-opt:hover { border-color: var(--gold); }
+    .radio-opt input[type=radio] { accent-color: var(--gold); width: 16px; height: 16px; flex-shrink: 0; }
+    .radio-opt label { color: #fff; font-size: .9rem; font-weight: 400; cursor: pointer; flex: 1; }
+
+    .quiz-input {
+      width: 100%; padding: 14px 18px; border-radius: 10px;
+      background: var(--navy); border: 1px solid rgba(197,160,89,.2);
+      color: #fff; font-size: .95rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      outline: none; transition: border-color .2s;
+    }
+    .quiz-input::placeholder { color: rgba(255,255,255,.3); }
+    .quiz-input:focus { border-color: var(--gold); }
+
+    .quiz-textarea {
+      width: 100%; padding: 14px 18px; border-radius: 10px;
+      background: var(--navy); border: 1px solid rgba(197,160,89,.2);
+      color: #fff; font-size: .9rem; line-height: 1.6;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      outline: none; resize: vertical; min-height: 120px;
+      transition: border-color .2s;
+    }
+    .quiz-textarea::placeholder { color: rgba(255,255,255,.3); }
+    .quiz-textarea:focus { border-color: var(--gold); }
+    .quiz-hint { font-size: .8rem; color: rgba(255,255,255,.45); margin-bottom: 10px; }
+
+    .quiz-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 28px; margin-top: 28px;
+      border-top: 1px solid rgba(197,160,89,.15);
+    }
+    .btn-back {
+      background: transparent; border: 1px solid rgba(197,160,89,.3);
+      color: rgba(255,255,255,.7); padding: 10px 20px;
+      border-radius: 6px; cursor: pointer; font-size: .875rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: all .2s;
+    }
+    .btn-back:hover { background: rgba(255,255,255,.06); color: #fff; }
+    .btn-next {
+      background: var(--gold); color: var(--navy);
+      padding: 12px 28px; border-radius: 6px;
+      font-weight: 700; font-size: .9rem;
+      border: none; cursor: pointer;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: all .2s;
+    }
+    .btn-next:hover { background: #b08d46; }
+
+    .quiz-success { text-align: center; padding: 16px 0; }
+    .quiz-success-icon {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: rgba(197,160,89,.15); border: 1px solid rgba(197,160,89,.35);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .quiz-success-icon svg { width: 32px; height: 32px; color: var(--gold); }
+    .quiz-success h3 { color: #fff; font-size: 1.3rem; margin-bottom: 12px; }
+    .quiz-success p { color: rgba(255,255,255,.6); font-size: .9rem; line-height: 1.65; margin-bottom: 8px; }
+    .quiz-disclaimer {
+      background: rgba(10,17,40,.5); border: 1px solid rgba(197,160,89,.2);
+      border-radius: 8px; padding: 12px 16px;
+      font-size: .75rem; color: rgba(255,255,255,.35); margin: 16px 0 24px;
+    }
+
+    /* ── CONTATO / LOCALIZAÇÃO ── */
+    .contato-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 40px; align-items: center; }
+    .contato-box {
+      background: var(--navy); border: 1px solid rgba(197,160,89,.3);
+      border-radius: 16px; padding: 36px; color: #fff;
+      box-shadow: 0 16px 48px rgba(0,0,0,.2);
+    }
+    .contato-box h3 {
+      font-family: 'Cinzel', serif; font-size: 1rem; color: var(--gold-light);
+      padding-bottom: 20px; border-bottom: 1px solid rgba(197,160,89,.2);
+      margin-bottom: 24px;
+    }
+    .contato-item { display: flex; gap: 14px; margin-bottom: 18px; }
+    .contato-item svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+    .contato-item strong { display: block; font-weight: 600; font-size: .85rem; margin-bottom: 3px; }
+    .contato-item p { font-size: .85rem; color: rgba(255,255,255,.65); font-weight: 300; line-height: 1.5; }
+    .contato-item span { font-size: .75rem; color: var(--gold-light); font-weight: 500; }
+
+    .contato-btns { display: flex; gap: 10px; margin-top: 28px; }
+    .contato-btns .btn { flex: 1; justify-content: center; font-size: .825rem; padding: 11px 16px; }
+
+    .map-placeholder {
+      width: 100%; height: 420px; border-radius: 16px;
+      overflow: hidden; position: relative;
+      box-shadow: 0 16px 48px rgba(0,0,0,.12);
+      border: 1px solid #e5e7eb;
+    }
+    .map-placeholder iframe { width: 100%; height: 100%; border: 0; }
+    .map-overlay {
+      position: absolute; bottom: 0; inset-x: 0;
+      background: linear-gradient(to top, rgba(10,17,40,.85) 0%, transparent 100%);
+      padding: 24px 24px 20px;
+    }
+    .map-overlay p { color: #fff; font-family: 'Cinzel', serif; font-weight: 600; font-size: 1rem; }
+    .map-overlay span { color: rgba(255,255,255,.65); font-size: .82rem; }
+
+    /* ── CTA FINAL ── */
+    .cta-section {
+      padding: 80px 0; background: var(--ice);
+      border-top: 1px solid #e5e7eb; text-align: center;
+    }
+    .cta-section .section-title { margin-bottom: 12px; }
+    .cta-section p { color: var(--gray); font-size: 1.05rem; font-weight: 300; max-width: 520px; margin: 0 auto 36px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); color: #fff;
+      padding: 64px 0 40px;
+      border-top: 1px solid rgba(197,160,89,.15);
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 2fr 1.5fr; gap: 40px; margin-bottom: 48px; }
+    .footer-col h4 {
+      font-family: 'Cinzel', serif; font-size: .72rem; font-weight: 700;
+      color: var(--gold-light); text-transform: uppercase; letter-spacing: .15em;
+      margin-bottom: 16px;
+    }
+    .footer-col p, .footer-col a, .footer-col li {
+      font-size: .82rem; color: rgba(255,255,255,.5);
+      font-weight: 300; line-height: 1.7; list-style: none;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 6px; }
+    .footer-col a:hover { color: var(--gold-light); }
+    .footer-col .oab { color: var(--gold-light); font-size: .75rem; font-weight: 500; }
+
+    .footer-bottom {
+      padding-top: 32px; border-top: 1px solid rgba(197,160,89,.15);
+      text-align: center; display: flex; flex-direction: column; gap: 10px;
+    }
+    .footer-bottom p { font-size: .75rem; color: rgba(255,255,255,.3); font-weight: 300; }
+    .footer-bottom .footer-disc { font-style: italic; max-width: 640px; margin: 0 auto; }
+    .footer-credit {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .75rem; color: rgba(212,181,114,.6);
+      transition: color .2s;
+    }
+    .footer-credit:hover { color: var(--gold-light); }
+
+    /* ── FLOAT WPP ── */
+    .float-wpp {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      background: #25D366; color: #fff;
+      border: none; border-radius: 999px; cursor: pointer;
+      padding: 16px; display: flex; align-items: center; gap: 0;
+      box-shadow: 0 6px 24px rgba(37,211,102,.4);
+      transition: all .3s; overflow: hidden; max-width: 56px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .float-wpp:hover { max-width: 220px; gap: 10px; padding: 16px 20px; }
+    .float-wpp svg { width: 24px; height: 24px; flex-shrink: 0; }
+    .float-wpp span {
+      white-space: nowrap; font-size: .85rem; font-weight: 600;
+      overflow: hidden; max-width: 0;
+      transition: max-width .3s, opacity .3s; opacity: 0;
+    }
+    .float-wpp:hover span { max-width: 160px; opacity: 1; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav, header .btn { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .photo-card { display: none; }
+      .sobre-grid { grid-template-columns: 1fr; }
+      .areas-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .contato-grid { grid-template-columns: 1fr; }
+      .map-placeholder { height: 300px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .quiz-box { padding: 28px 24px; }
+    }
+    @media (max-width: 640px) {
+      .section { padding: 60px 0; }
+      .areas-grid { grid-template-columns: 1fr; }
+      .sobre-cards { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero { padding: 60px 0 72px; }
+      .contato-btns { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3L3 9v3h18V9z"/><path d="M5 12v7h14v-7"/><line x1="3" y1="19" x2="21" y2="19"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-name">WSL</div>
+        <span class="logo-sub">Advocacia e Gestão</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#areas">Áreas de Atuação</a>
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#quiz">Quiz Jurídico</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="btn btn-gold" onclick="openWhatsApp()">Falar com a WSL</button>
+
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#inicio" onclick="toggleMenu()">Início</a>
+    <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+    <a href="#areas" onclick="toggleMenu()">Áreas de Atuação</a>
+    <a href="#como-funciona" onclick="toggleMenu()">Como Funciona</a>
+    <a href="#quiz" onclick="toggleMenu()">Quiz Jurídico</a>
+    <a href="#contato" onclick="toggleMenu()">Contato</a>
+    <button class="btn btn-gold" onclick="openWhatsApp(); toggleMenu()">Falar com a WSL</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-dots"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-inner">
+    <div>
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3L3 9v3h18V9z"/><path d="M5 12v7h14v-7"/></svg>
+        Excelência e Dedicação Jurídica
+      </div>
+      <h1>Orientação jurídica com clareza, estratégia e atendimento próximo.</h1>
+      <p>A <strong>WSL Advocacia e Gestão</strong> oferece atendimento presencial em São Bernardo do Campo e on-line para clientes em todo o país.</p>
+      <div class="hero-oab">
+        <strong>Wiliam da Silva Lucas</strong>
+        <span>OAB-SP nº 377.544</span>
+      </div>
+      <div class="hero-actions">
+        <button class="btn btn-gold btn-lg" onclick="openWhatsApp('Olá! Gostaria de falar pelo WhatsApp com a WSL Advocacia.')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.77 19.79 19.79 0 01.22 1.1 2 2 0 012.22 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.4a16 16 0 006.69 6.69l1.54-1.54a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15.92z"/></svg>
+          Falar pelo WhatsApp
+        </button>
+        <a href="#areas" class="btn btn-outline btn-lg">Áreas de atuação</a>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-card-inner">
+        <img src="wiliam.jpg" alt="Wiliam da Silva Lucas, advogado OAB-SP 377.544" style="width:100%;height:340px;object-fit:cover;object-position:top center;border-radius:10px;margin-bottom:20px;border:1px solid rgba(197,160,89,.2);" />
+        <div class="photo-name">Wiliam da Silva Lucas</div>
+        <div class="photo-role">Advogado Responsável · OAB-SP nº 377.544</div>
+        <div class="photo-loc">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          São Bernardo do Campo – SP
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section" id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-text">
+        <span class="section-label">Institucional</span>
+        <h2 class="section-title">Conheça a WSL Advocacia e Gestão</h2>
+        <div class="section-rule"></div>
+        <p>Sob a liderança do advogado <strong>Wiliam da Silva Lucas</strong> (OAB-SP nº 377.544), a WSL Advocacia e Gestão atua com foco na resolução de conflitos e na proteção dos direitos de seus clientes, com total discrição e rigor metodológico.</p>
+        <p>Entendemos que cada situação jurídica possui particularidades únicas. Por isso, oferecemos análises individuais e detalhadas, buscando sempre o melhor direcionamento — seja de forma consultiva ou contenciosa.</p>
+        <div class="sobre-cards">
+          <div class="sobre-card">
+            <div class="sobre-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+            </div>
+            <div>
+              <h4>Atendimento Presencial</h4>
+              <p>Escritório no Centro de São Bernardo do Campo – SP.</p>
+            </div>
+          </div>
+          <div class="sobre-card">
+            <div class="sobre-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <div>
+              <h4>Atendimento On-line</h4>
+              <p>Consultas por vídeo com total segurança para todo o Brasil.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diferenciais-box">
+        <h4>Nossos Diferenciais</h4>
+        <div class="dif-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <p><strong>Análise individualizada:</strong> Estudo aprofundado e dedicado de cada caso.</p>
+        </div>
+        <div class="dif-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <p><strong>Comunicação clara:</strong> Linguagem acessível, sem termos confusos — cliente sempre informado.</p>
+        </div>
+        <div class="dif-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <p><strong>Flexibilidade:</strong> Presencial em SBC e formatos on-line para clientes de todo o país.</p>
+        </div>
+        <div class="dif-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <p><strong>Ética e transparência:</strong> Atuação pautada rigorosamente nas normas da OAB e LGPD.</p>
+        </div>
+        <button class="btn btn-gold" style="width:100%;justify-content:center;" onclick="openWhatsApp('Olá! Gostaria de agendar uma consulta com a WSL Advocacia.')">
+          Agendar Consulta
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÁREAS -->
+<section class="section bg-ice" id="areas">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <span class="section-label">Especialidades</span>
+      <h2 class="section-title">Áreas de Atuação Jurídica</h2>
+      <div class="section-rule" style="margin:0 auto 16px;"></div>
+      <p class="section-lead" style="margin:0 auto;">Atuação especializada nos principais ramos do direito para resguardar seus interesses e direitos.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-card">
+        <div>
+          <div class="area-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3L3 9v3h18V9z"/><path d="M5 12v7h14v-7"/></svg>
+          </div>
+          <h3>Direito Cível</h3>
+          <p>Assessoria em contratos, responsabilidade civil, disputas de propriedade, cobranças, inventários e direito de família.</p>
+        </div>
+        <a href="#quiz" class="area-link">
+          Tenho uma questão
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="area-card">
+        <div>
+          <div class="area-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Direito Previdenciário</h3>
+          <p>Orientação junto ao INSS, aposentadorias, benefícios por incapacidade, pensões e revisões de benefícios.</p>
+        </div>
+        <a href="#quiz" class="area-link">
+          Tenho uma questão
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="area-card">
+        <div>
+          <div class="area-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Direito do Consumidor</h3>
+          <p>Defesa em relações de consumo, negativação indevida, problemas com bancos, companhias aéreas e compras.</p>
+        </div>
+        <a href="#quiz" class="area-link">
+          Tenho uma questão
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="area-card">
+        <div>
+          <div class="area-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          </div>
+          <h3>Direito Trabalhista</h3>
+          <p>Defesa de empregados e empregadores: reclamações, rescisões, horas extras e verbas rescisórias.</p>
+        </div>
+        <a href="#quiz" class="area-link">
+          Tenho uma questão
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="area-card" style="grid-column: span 2;">
+        <div>
+          <div class="area-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>Direito Criminal</h3>
+          <p>Acompanhamento em delegacias, audiências de custódia, defesa em inquéritos policiais e ações penais com absoluto sigilo e rigor técnico.</p>
+        </div>
+        <a href="#quiz" class="area-link">
+          Tenho uma questão
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section" id="como-funciona">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <span class="section-label">Metodologia</span>
+      <h2 class="section-title">Como Funciona</h2>
+      <div class="section-rule" style="margin:0 auto 16px;"></div>
+      <p class="section-lead" style="margin:0 auto;">Um processo simples, ágil e transparente para iniciar o seu atendimento jurídico.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Você conta sua situação</h3>
+        <p>Preencha o quiz jurídico ou entre em contato diretamente pelo WhatsApp com os detalhes do seu caso.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>O caso é analisado</h3>
+        <p>O advogado Wiliam da Silva Lucas analisa as informações para compreender a viabilidade e os direitos envolvidos.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Você recebe orientação</h3>
+        <p>Entramos em contato para apresentar as opções e agendar o atendimento — presencial ou on-line.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz-section" id="quiz">
+  <div class="hero-dots"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="quiz-header">
+      <span class="section-label">Qualificação de Atendimento</span>
+      <h2 class="section-title">Descubra se você tem um caso</h2>
+      <div class="section-rule" style="margin:0 auto 16px;"></div>
+      <p class="section-lead">Responda algumas perguntas rápidas para agilizar o seu atendimento.</p>
+    </div>
+
+    <div class="quiz-box">
+      <!-- Progress -->
+      <div id="quizProgressWrap">
+        <div class="quiz-progress-label">
+          <span id="quizStepLabel">Etapa 1 de 5</span>
+          <span id="quizPctLabel">20% concluído</span>
+        </div>
+        <div class="quiz-bar"><div class="quiz-bar-fill" id="quizBar" style="width:20%"></div></div>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="quiz-step active" id="step1">
+        <h3>Qual área está relacionada ao seu caso?</h3>
+        <div class="radio-options">
+          <div class="radio-opt"><input type="radio" name="area" id="a1" value="Direito Cível"><label for="a1">Direito Cível</label></div>
+          <div class="radio-opt"><input type="radio" name="area" id="a2" value="Direito Previdenciário"><label for="a2">Direito Previdenciário</label></div>
+          <div class="radio-opt"><input type="radio" name="area" id="a3" value="Direito do Consumidor"><label for="a3">Direito do Consumidor</label></div>
+          <div class="radio-opt"><input type="radio" name="area" id="a4" value="Direito Trabalhista"><label for="a4">Direito Trabalhista</label></div>
+          <div class="radio-opt"><input type="radio" name="area" id="a5" value="Direito Criminal"><label for="a5">Direito Criminal</label></div>
+          <div class="radio-opt"><input type="radio" name="area" id="a6" value="Não sei identificar"><label for="a6">Não sei identificar</label></div>
+        </div>
+        <div class="quiz-nav"><div></div><button class="btn-next" onclick="nextStep(1)">Avançar</button></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="quiz-step" id="step2">
+        <h3>O que aconteceu? Conte brevemente.</h3>
+        <p class="quiz-hint">Descreva os pontos principais para entendermos sua demanda.</p>
+        <textarea class="quiz-textarea" id="descricao" placeholder="Ex: Comprei um produto com defeito e a loja se recusa a trocar..."></textarea>
+        <div class="quiz-nav">
+          <button class="btn-back" onclick="prevStep(2)">Voltar</button>
+          <button class="btn-next" onclick="nextStep(2)">Avançar</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="quiz-step" id="step3">
+        <h3>Você já possui algum processo relacionado?</h3>
+        <div class="radio-options">
+          <div class="radio-opt"><input type="radio" name="processo" id="p1" value="Sim"><label for="p1">Sim</label></div>
+          <div class="radio-opt"><input type="radio" name="processo" id="p2" value="Não"><label for="p2">Não</label></div>
+          <div class="radio-opt"><input type="radio" name="processo" id="p3" value="Não sei"><label for="p3">Não sei</label></div>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn-back" onclick="prevStep(3)">Voltar</button>
+          <button class="btn-next" onclick="nextStep(3)">Avançar</button>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="quiz-step" id="step4">
+        <h3>Qual é o seu nome?</h3>
+        <input class="quiz-input" type="text" id="nome" placeholder="Seu nome completo" />
+        <div class="quiz-nav">
+          <button class="btn-back" onclick="prevStep(4)">Voltar</button>
+          <button class="btn-next" onclick="nextStep(4)">Avançar</button>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="quiz-step" id="step5">
+        <h3>Qual sua cidade e WhatsApp para contato?</h3>
+        <input class="quiz-input" type="text" id="cidade" placeholder="Ex: São Bernardo do Campo – SP" style="margin-bottom:12px;" />
+        <input class="quiz-input" type="tel" id="whatsapp" placeholder="(11) 99999-9999" />
+        <div class="quiz-nav">
+          <button class="btn-back" onclick="prevStep(5)">Voltar</button>
+          <button class="btn-next" onclick="finishQuiz()">Finalizar e ir para o WhatsApp</button>
+        </div>
+      </div>
+
+      <!-- Success -->
+      <div class="quiz-step" id="quizSuccess">
+        <div class="quiz-success">
+          <div class="quiz-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 id="successName">Obrigado pelas informações!</h3>
+          <p>Você será redirecionado para o WhatsApp da WSL Advocacia com todas as suas respostas resumidas. O advogado entrará em contato para orientação.</p>
+          <div class="quiz-disclaimer">Este formulário possui caráter informativo e institucional, não constituindo parecer jurídico ou garantia de resultado.</div>
+          <button class="btn btn-whatsapp btn-lg" id="wppFinalBtn" onclick="sendToWhatsApp()" style="margin:0 auto;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.77 19.79 19.79 0 01.22 1.1 2 2 0 012.22 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.4a16 16 0 006.69 6.69l1.54-1.54a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15.92z"/></svg>
+            Abrir WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="section" id="contato">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <span class="section-label">Localização e Contato</span>
+      <h2 class="section-title">Atendimento presencial e on-line</h2>
+      <div class="section-rule" style="margin:0 auto 16px;"></div>
+      <p class="section-lead" style="margin:0 auto;">Venha nos visitar em São Bernardo do Campo ou receba atendimento digital com total segurança.</p>
+    </div>
+
+    <div class="contato-grid">
+      <div class="contato-box">
+        <h3>WSL Advocacia e Gestão</h3>
+
+        <div class="contato-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <strong>Endereço</strong>
+            <p>Rua José Versolato, 111, 11º andar, Sala 1101<br>Centro, São Bernardo do Campo – SP</p>
+          </div>
+        </div>
+
+        <div class="contato-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.77 19.79 19.79 0 01.22 1.1 2 2 0 012.22 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.4a16 16 0 006.69 6.69l1.54-1.54a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15.92z"/></svg>
+          <div>
+            <strong>WhatsApp</strong>
+            <p>(11) 98020-7406</p>
+          </div>
+        </div>
+
+        <div class="contato-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <strong>E-mail</strong>
+            <p>wiliamlucasadv@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="contato-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          <div>
+            <strong>Advogado Responsável</strong>
+            <p>Wiliam da Silva Lucas<br><span>OAB-SP nº 377.544</span></p>
+          </div>
+        </div>
+
+        <div class="contato-btns">
+          <button class="btn btn-outline" onclick="window.open('https://maps.google.com/?q=Rua+Jose+Versolato+111+Sao+Bernardo+do+Campo','_blank')">
+            Traçar Rota
+          </button>
+          <button class="btn btn-gold" onclick="openWhatsApp('Olá! Gostaria de falar pelo WhatsApp com a WSL Advocacia.')">
+            Falar no WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="map-placeholder" style="cursor:pointer;" onclick="window.open('https://maps.google.com/?q=Rua+Jose+Versolato+111+Sao+Bernardo+do+Campo+SP','_blank')">
+        <img src="domo.jpg" alt="Edifício Domo Business - Rua José Versolato, 111" style="width:100%;height:100%;object-fit:cover;" />
+        <div class="map-overlay">
+          <p>Domo Business · Rua José Versolato, 111</p>
+          <span>Centro, São Bernardo do Campo – SP &nbsp;·&nbsp; Clique para ver no mapa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="container">
+    <span class="section-label" style="display:block;text-align:center;margin-bottom:12px;">Entre em Contato</span>
+    <h2 class="section-title">Pronto para resolver sua questão jurídica?</h2>
+    <p>Nossa equipe está preparada para oferecer o suporte necessário com total sigilo e profissionalismo.</p>
+    <button class="btn btn-gold btn-lg" onclick="openWhatsApp('Olá! Gostaria de falar com a WSL Advocacia.')">
+      Falar com a WSL Advocacia
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="logo" style="margin-bottom:16px;">
+          <div class="logo-icon" style="width:32px;height:32px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M12 3L3 9v3h18V9z"/><path d="M5 12v7h14v-7"/></svg>
+          </div>
+          <span class="logo-name" style="font-size:1rem;">WSL Advocacia</span>
+        </div>
+        <p>Wiliam da Silva Lucas<br><span class="oab">OAB-SP nº 377.544</span></p>
+        <p style="margin-top:6px;">São Bernardo do Campo – SP</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#areas">Áreas de Atuação</a></li>
+          <li><a href="#quiz">Quiz Jurídico</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <p>Rua José Versolato, 111, 11º andar, Sala 1101<br>
+        Centro, São Bernardo do Campo – SP<br>
+        WhatsApp: (11) 98020-7406<br>
+        wiliamlucasadv@gmail.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Privacidade & LGPD</h4>
+        <p>As informações coletadas neste site são tratadas com total confidencialidade, em conformidade com a LGPD.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-disc">"As informações deste site possuem caráter institucional e informativo e não substituem orientação jurídica individualizada."</p>
+      <p>© <span id="year"></span> WSL Advocacia e Gestão · Wiliam da Silva Lucas (OAB-SP nº 377.544). Todos os direitos reservados.</p>
+      <a href="https://alfaflow-ai-growth.lovable.app" target="_blank" rel="noreferrer" class="footer-credit">
+        Site desenvolvido por Alfa Flow
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Float WhatsApp -->
+<button class="float-wpp" onclick="openWhatsApp()" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Falar no WhatsApp</span>
+</button>
+
+<script>
+  const WHATSAPP = '5511980207406';
+
+  function openWhatsApp(msg) {
+    const text = msg || 'Olá, gostaria de falar com a WSL Advocacia e Gestão sobre uma questão jurídica.';
+    window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(text), '_blank');
+  }
+
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ── QUIZ ──
+  let currentStep = 1;
+  const totalSteps = 5;
+
+  function updateProgress(step) {
+    const pct = Math.round((step / totalSteps) * 100);
+    document.getElementById('quizBar').style.width = pct + '%';
+    document.getElementById('quizStepLabel').textContent = 'Etapa ' + step + ' de ' + totalSteps;
+    document.getElementById('quizPctLabel').textContent = pct + '% concluído';
+  }
+
+  function showStep(step) {
+    document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
+    const el = document.getElementById('step' + step) || document.getElementById('quizSuccess');
+    if (el) el.classList.add('active');
+    updateProgress(Math.min(step, totalSteps));
+  }
+
+  function nextStep(from) {
+    if (from === 1) {
+      const sel = document.querySelector('input[name="area"]:checked');
+      if (!sel) { alert('Por favor, selecione uma área.'); return; }
+    }
+    if (from === 4) {
+      const nome = document.getElementById('nome').value.trim();
+      if (nome.length < 2) { alert('Por favor, informe seu nome.'); return; }
+    }
+    currentStep = from + 1;
+    showStep(currentStep);
+  }
+
+  function prevStep(from) {
+    currentStep = from - 1;
+    showStep(currentStep);
+  }
+
+  function finishQuiz() {
+    const nome = document.getElementById('nome').value.trim();
+    const cidade = document.getElementById('cidade').value.trim();
+    const wpp = document.getElementById('whatsapp').value.trim();
+    if (cidade.length < 2) { alert('Por favor, informe sua cidade.'); return; }
+    if (wpp.length < 8) { alert('Por favor, informe seu WhatsApp.'); return; }
+
+    document.getElementById('successName').textContent = 'Obrigado, ' + (nome || 'cliente') + '!';
+    document.getElementById('quizProgressWrap').style.display = 'none';
+    document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
+    document.getElementById('quizSuccess').classList.add('active');
+  }
+
+  function sendToWhatsApp() {
+    const area = (document.querySelector('input[name="area"]:checked') || {}).value || 'não informada';
+    const desc = document.getElementById('descricao').value.trim() || 'não informada';
+    const proc = (document.querySelector('input[name="processo"]:checked') || {}).value || 'não informado';
+    const nome = document.getElementById('nome').value.trim() || 'não informado';
+    const cidade = document.getElementById('cidade').value.trim() || 'não informada';
+    const wpp = document.getElementById('whatsapp').value.trim() || 'não informado';
+
+    const msg = `Olá, WSL Advocacia! Respondi ao quiz no site e gostaria de atendimento.\n\n*Nome:* ${nome}\n*Cidade:* ${cidade}\n*WhatsApp:* ${wpp}\n*Área:* ${area}\n*Tem processo?* ${proc}\n*Relato:* ${desc}`;
+    openWhatsApp(msg);
+  }
+</script>
+</body>
+</html>
